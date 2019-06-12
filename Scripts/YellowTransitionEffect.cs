@@ -5,9 +5,9 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class YellowTransitionEffect : MonoBehaviour
 {
-    public TransitionAEffect transitionAShader;
-    public TransitionBEffect transitionBShader;
-    protected TransitionEffect transitionShader;
+    public TransitionAEffect transitionAEffect;
+    public TransitionBEffect transitionBEffect;
+    protected TransitionEffect transitionEffect;
 
     public enum Transition
     {
@@ -20,12 +20,12 @@ public class YellowTransitionEffect : MonoBehaviour
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        if (transitionShader == null || transition != m_Transition)
+        if (transitionEffect == null || transition != m_Transition)
         {
             m_Transition = transition;
-            transitionShader = GetTransitionEffect(m_Transition);
+            transitionEffect = GetTransitionEffect(m_Transition);
         }
-        transitionShader.OnRenderImage(source, destination);
+        transitionEffect.OnRenderImage(source, destination);
     }
 
     protected TransitionEffect GetTransitionEffect(Transition transition)
@@ -35,10 +35,10 @@ public class YellowTransitionEffect : MonoBehaviour
         switch (transition)
         {
             case Transition.TransitionA:
-                effect = transitionAShader;
+                effect = transitionAEffect;
                 break;
             case Transition.TransitionB:
-                effect = transitionBShader;
+                effect = transitionBEffect;
                 break;
             default:
                 break;
