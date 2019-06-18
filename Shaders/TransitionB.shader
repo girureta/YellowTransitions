@@ -46,20 +46,6 @@
 				return ret;
 			}
 
-			float2 Pixelize(float2 uv)
-			{
-				float2 c = uv;
-				c = round(_Factor * c) / _Factor;
-				return c;
-			}
-
-			float2 Pixelize2(float2 uv)
-			{
-				float2 c = uv;
-				c = round(_Factor * c);
-				return c;
-			}
-
 			v2f vert(appdata v)
 			{
 				v2f o;
