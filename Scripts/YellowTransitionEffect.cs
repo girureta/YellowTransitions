@@ -73,6 +73,10 @@ public class YellowTransitionEffect : MonoBehaviour
                 Update();
                 Graphics.Blit(source, destination, material);
             }
+            else
+            {
+                Graphics.Blit(source, destination);
+            }
         }
     }
 
