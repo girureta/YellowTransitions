@@ -39,9 +39,9 @@
 			float TransitionB(float2 uv)
 			{
 				float2 c = ceil((_Factor) * uv);
-				float sign = step(1,fmod(c.y, 2));
+				float even = step(1,fmod(c.y, 2));
 				c = c / (_Factor + 0.01);
-				float ret = step(_Progress, (sign*(1.0 - c.x)) + ((1-sign)*c.x) );
+				float ret = step(_Progress, (even*(1.0 - c.x)) + ((1- even)*c.x) );
 
 				return ret;
 			}
