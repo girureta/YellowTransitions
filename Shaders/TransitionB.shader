@@ -41,7 +41,7 @@
 				float2 c = ceil((_Factor) * uv);
 				float even = step(1,fmod(c.y, 2));
 				c = c / (_Factor + 0.01);
-				float ret = step(_Progress, (even*(1.0 - c.x)) + ((1- even)*c.x) );
+				float ret = step(_Progress, c.x+even*(1-2*c.x) );
 
 				return ret;
 			}
