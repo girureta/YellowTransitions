@@ -1,6 +1,6 @@
 # Yellow transitions
 
-Implementation of a fade to black effect from a popular game about fighting animals.
+Implementation of fade to black effects from a popular game about fighting animals.
 
 # Transition A
 
