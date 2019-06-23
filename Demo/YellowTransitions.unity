@@ -307,10 +307,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1df1be4b01bb1f4eb4470f88f76fadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAShader:
+  transitionAEffect:
     shader: {fileID: 4800000, guid: f1733ab4327e71c4f91715be0ca3393e, type: 3}
     angle: 0
     factor: 18.75
+  transitionBEffect:
+    shader: {fileID: 4800000, guid: e29f19f7e86976a4fab8b6af560a48c5, type: 3}
+    progress: 0
+    factor: 18
+  transition: 1
 --- !u!1 &2078570933
 GameObject:
   m_ObjectHideFlags: 0
